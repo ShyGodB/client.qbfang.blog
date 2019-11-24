@@ -11,6 +11,10 @@ import VueCropper from 'vue-cropper'
 import '../public/css/bootstrap-grid.css'
 import '../public/css/bootstrap.css'
 import '../public/css/bootstrap-reboot.css'
+import '../public/css/main.css'
+import '../public/css/mg.css'
+import '../public/css/pd.css'
+import '../public/css/text.css'
 
 var options = {
   persist: true

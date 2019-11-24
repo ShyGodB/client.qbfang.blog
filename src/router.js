@@ -13,49 +13,29 @@ export default new Router({
             component: () => import(/* webpackChunkName: "about" */ './views/Index.vue')
         },
         {
-            path: '/login',
-            name: 'login',
-            component: () => import(/* webpackChunkName: "about" */ './views/Login.vue')
+            path: '/operating/:tab',
+            name: 'operating',
+            component: () => import(/* webpackChunkName: "about" */ './views/Operating.vue')
         },
         {
-          path: '/register',
-          name: 'register',
-          component: () => import(/* webpackChunkName: "about" */ './views/Register.vue')
+            path: '/settle',
+            name: 'settle',
+            component: () => import(/* webpackChunkName: "about" */ './views/Settle.vue')
         },
         {
-          path: '/userhome',
-          name: 'userhome',
-          component: () => import(/* webpackChunkName: "about" */ './views/Userhome.vue')
+            path: '/data',
+            name: 'data',
+            component: () => import(/* webpackChunkName: "about" */ './views/Data.vue')
         },
         {
-           path: '/userinfo',
-           name: 'userinfo',
-           component: () => import(/* webpackChunkName: "about" */ './views/Userinfo.vue')
+            path: '/setting',
+            name: 'setting',
+            component: () => import(/* webpackChunkName: "about" */ './views/Setting.vue')
         },
         {
-           path: '/result/:keyword/:item',
-           name: 'result',
-           component: () => import(/* webpackChunkName: "about" */ './views/Result.vue')
-       },
-       {
-          path: '/bosshome',
-          name: 'bosshome',
-          component: () => import(/* webpackChunkName: "about" */ './views/Bosshome.vue')
-       },
-       {
-          path: '/shopcar',
-          name: 'shopcar',
-          component: () => import(/* webpackChunkName: "about" */ './views/Shopcar.vue')
-      },
-      {
-         path: '/good/:id',
-         name: 'good',
-         component: () => import(/* webpackChunkName: "about" */ './views/Good.vue')
-     },
-     {
-        path: '/404',
-        name: '404',
-        component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
-     }
+            path: '/404',
+            name: '404',
+            component: () => import(/* webpackChunkName: "about" */ './views/404.vue')
+        }
     ]
 })

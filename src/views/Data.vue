@@ -1,13 +1,17 @@
 <template>
-    <el-container>
-            <router-view></router-view>
-    </el-container>
+    <div id="Data">
+
+    </div>
 </template>
 
 
 <script>
+import axios from 'axios'
+
 export default {
-    name: 'Content',
+    name: 'Data',
+    components: {
+    },
     data() {
         return {
 
@@ -18,7 +22,5 @@ export default {
 
 
 <style scoped>
-#Content {
-    margin: 0
-}
+
 </style>

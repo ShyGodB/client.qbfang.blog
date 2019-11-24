@@ -5,7 +5,7 @@
         </el-header>
 
         <el-main>
-            <!-- <mainbox></mainbox> -->
+            <mainbox></mainbox>
         </el-main>
 
         <el-footer>

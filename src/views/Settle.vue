@@ -1,17 +1,21 @@
 <template>
-      <div class="hello">
+    <div id="Settle">
 
-      </div>
+    </div>
 </template>
 
 
 <script>
+import axios from 'axios'
+import md5 from 'md5'
+
 export default {
-    name: 'HelloWorld',
+    name: 'Settle',
     data() {
         return {
-
         }
+    },
+    methods: {
     }
 }
 </script>

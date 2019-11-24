@@ -3,37 +3,37 @@
         <el-row>
             <el-col :span="24">
                 <div class="grid-content">
-                    <el-menu :default-active="activeIndex"
-                    class="el-menu-demo"
-                    mode="horizontal"
-                    text-color="#000000"
+                    <el-menu :default-active="activeIndex" 
+                    class="el-menu-demo" 
+                    mode="horizontal" 
+                    text-color="#000000" 
                     @select="handleSelect">
                         <el-menu-item index="1" class="f-left">
-                            <router-link to="/">主页</router-link>
+                            半世浮尘半世缘
                         </el-menu-item>
 
                         <el-menu-item index="2" class="f-left">
-                            <router-link to="/operating/order">运营管理</router-link>
+                            <router-link to="/">主页</router-link>
                         </el-menu-item>
 
                         <el-menu-item index="3" class="f-left">
-                            <router-link to="/settle">结算中心</router-link>
+                            <router-link to="/register">分类</router-link>
                         </el-menu-item>
 
                         <el-menu-item index="4" class="f-left">
-                            <router-link to="/data">数据分析</router-link>
+                            <router-link to="/bosshome">标签</router-link>
                         </el-menu-item>
 
                         <el-menu-item index="5" class="f-left">
-                            <router-link to="/setting">系统设置</router-link>
+                            <router-link to="/userhome">生活</router-link>
                         </el-menu-item>
 
                         <el-menu-item index="6" class="f-right">
-                            退出
+                            <router-link to="/result/电脑/complex">关于</router-link>
                         </el-menu-item>
 
                         <el-menu-item index="7" class="f-right">
-                            管理员：测试F
+                            <router-link to="/userinfo">Github</router-link>
                         </el-menu-item>
                     </el-menu>
                 </div>
@@ -45,24 +45,54 @@
 
 <script>
 export default {
+    inject: ['reload'],
     name: 'mainnav',
+    props: ['user'],
     data() {
         return {
-            activeIndex: '1',
+            search: '123123',
         }
     },
     methods: {
         handleSelect(key, keyPath) {
-            console.log(key, keyPath);
+            // console.log(key, keyPath);
+        },
+        logout() {
+            this.$session.destroy();
+            if (this.$session.exists()) {
+                this.user.hasUser = true;
+            } else {
+                this.user.hasUser = false;
+            }
+            this.$router.push('/login');
         }
     },
     created() {
-
+        if (this.$session.exists()) {
+            this.user.hasUser = true;
+        } else {
+            this.user.hasUser = false;
+        }
     }
 }
 </script>
 
 
 <style scoped>
+#mainnav .f-left {
+    float: left;
+}
 
+#mainnav .f-right {
+    float: right;
+}
+a {
+    text-decoration: none;
+}
+.router-link-active {
+    text-decoration: none;
+}
+.line {
+    display: inline-block;
+}
 </style>

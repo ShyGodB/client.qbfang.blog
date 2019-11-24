@@ -1,24 +1,22 @@
 <template>
-    <div id="Content">
-        <router-view></router-view>
-    </div>
+      <div class="hello">
+
+      </div>
 </template>
 
 
 <script>
 export default {
-    name: 'Content',
+    name: 'HelloWorld',
     data() {
         return {
 
         }
-    } 
+    }
 }
 </script>
 
 
 <style scoped>
-#Content {
-    margin: 0
-}
+
 </style>
